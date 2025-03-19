@@ -12,15 +12,15 @@ How to import virtual machine
 
   ![image](https://github.com/user-attachments/assets/9c83fe2c-cf10-4925-baa0-f4b3352b0ade)
 
-  3. Go to lower right corner then enter ”Change Setting”
+  2. Go to lower right corner then enter ”Change Setting”
 
   ![image](https://github.com/user-attachments/assets/70ae3ac2-8c05-41ef-8d18-6383af1aa64c)
 
-  4. Enter ”Add Network”, then choose desire network, For our case we choose VMnet2.
+  3. Enter ”Add Network”, then choose desire network, For our case we choose VMnet2.
 
   ![image](https://github.com/user-attachments/assets/d3e81bcf-2fbb-4f39-9419-1c214869c849)
 
-  6. Select VMnet 2, correct option ”Use local DHCP service to distribute IP address to
+  4. Select VMnet 2, correct option ”Use local DHCP service to distribute IP address to
     VMs”as
 
   Then change subnet IP to ”192.168.1.0” with subnet mask of ”255.255.255.0” and click
@@ -47,11 +47,11 @@ How to import virtual machine
 
 ![image](https://github.com/user-attachments/assets/11a82932-1b55-4f32-9d44-6911fbd26e01)
 
-  3. In setting window, enter ”Add”, select ”Network Adapter” and then click ”Finish”
+  2. In setting window, enter ”Add”, select ”Network Adapter” and then click ”Finish”
 
 ![image](https://github.com/user-attachments/assets/8561b148-d99b-400b-a682-039ebed2ccd7)
 
-  4.Enter one of the ”Network adapter”,
+  3.Enter one of the ”Network adapter”,
 
   • first network adapter will use ”Bridged” option.
 
@@ -85,7 +85,7 @@ service
 
 $ sudo yum upgrade
 
-3. Then you can access Wazuh Dashboard by enter URL of Wazuh server IP and use
+2. Then you can access Wazuh Dashboard by enter URL of Wazuh server IP and use
 following Login and Password
 
 URL: https://<wazuh.server.ip>
@@ -111,7 +111,7 @@ etc/ossec.conf
 
 $ sudo nano /var/ossec/etc/ossec.conf
 
-3. Within configure file adding following line to enable Wazuh to receive log from syslog
+2. Within configure file adding following line to enable Wazuh to receive log from syslog
 then save file.
 
 <remote>
@@ -132,11 +132,11 @@ then save file.
   
 • <local.ip>: is IP of Wazuh server
 
-5. Perform following command to restart Wazuh-manager to apply change.
+3. Perform following command to restart Wazuh-manager to apply change.
 
 $ systemctl restart wazuh-manager
 
-4 Window 10 VM setup and configuration
+4.Window 10 VM setup and configuration
 
 4.1 Install Wazuh agent onto system
 
@@ -218,19 +218,19 @@ $ sudo systemctl enable wazuh-agent
 
 $ sudo systemctl start wazuh-agent
 
-B.5.2 Configuration to allow syslog to forwarding log to Wazuh server
+5.2 Configuration to allow syslog to forwarding log to Wazuh server
 
-B.5.3 Option: Configuration on Wazuh agent to allow forwarding log from others log
+5.3 Option: Configuration on Wazuh agent to allow forwarding log from others log
 file
 
-B.6 Fortinet firewall setup
+6.Fortinet firewall setup
 
-B.6.1 Setup logging system to send log to Wazuh server via syslog
+6.1 Setup logging system to send log to Wazuh server via syslog
 
-B.7 RouterOS/MikroTik setup and configuration
+7. RouterOS/MikroTik setup and configuration
 
-B.7.1 Setup logging system to send log to Wazuh server via syslog
+7.1 Setup logging system to send log to Wazuh server via syslog
 
-B.7.2 Import essential decoder and rule for MikroTik
+7.2 Import essential decoder and rule for MikroTik
 
-B.7.3 Customize rule for MikroTi
+7.3 Customize rule for MikroTi
