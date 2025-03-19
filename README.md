@@ -17,9 +17,10 @@ How to import virtual machine
   ![image](https://github.com/user-attachments/assets/70ae3ac2-8c05-41ef-8d18-6383af1aa64c)
 
   4. Enter ”Add Network”, then choose desire network, For our case we choose VMnet2.
-    ![image](https://github.com/user-attachments/assets/d3e81bcf-2fbb-4f39-9419-1c214869c849)
 
-  5. Select VMnet 2, correct option ”Use local DHCP service to distribute IP address to
+  ![image](https://github.com/user-attachments/assets/d3e81bcf-2fbb-4f39-9419-1c214869c849)
+
+  6. Select VMnet 2, correct option ”Use local DHCP service to distribute IP address to
     VMs”as
 
   Then change subnet IP to ”192.168.1.0” with subnet mask of ”255.255.255.0” and click
@@ -28,42 +29,51 @@ How to import virtual machine
   ![image](https://github.com/user-attachments/assets/1bdf8f82-d7a7-4eb0-af54-35dfe2ccf803)
 
   
-  1.2 Import virtual machine to VMware Workstation
+1.2 Import virtual machine to VMware Workstation
   
-  1. Upon VMware Workstation window, on top left corner, enter ”File” > ”Open”
+1. Upon VMware Workstation window, on top left corner, enter ”File” > ”Open”
+
   ![image](https://github.com/user-attachments/assets/78b5fa9d-adfe-4c58-9900-00a0fa84f424)
 
-  3. Then choose desire virtual machine and the file need to have file extension of ”OVA”
+2. Then choose desire virtual machine and the file need to have file extension of ”OVA”
     or ”OVF”
+
   ![image](https://github.com/user-attachments/assets/b85278de-2749-43de-bd19-8724f4871992)
 
-2.Network adapter setup for all virtual machine
+3.Network adapter setup for all virtual machine
 
   1. Upon VMware Workstation window, perform right-click on desire virtual station and
   enter ”Setting”
+
 ![image](https://github.com/user-attachments/assets/11a82932-1b55-4f32-9d44-6911fbd26e01)
 
-  2. In setting window, enter ”Add”, select ”Network Adapter” and then click ”Finish”
-  ![image](https://github.com/user-attachments/assets/8561b148-d99b-400b-a682-039ebed2ccd7)
+  3. In setting window, enter ”Add”, select ”Network Adapter” and then click ”Finish”
 
-  3.Enter one of the ”Network adapter”,
+![image](https://github.com/user-attachments/assets/8561b148-d99b-400b-a682-039ebed2ccd7)
+
+  4.Enter one of the ”Network adapter”,
 
   • first network adapter will use ”Bridged” option.
 
   • Second network adapter will use ”Custom” option then choose VMnet2 that create
   earlier.
-  ![image](https://github.com/user-attachments/assets/5b47e567-76ec-47cc-a5a2-9bbc536b5628)
+  
+![image](https://github.com/user-attachments/assets/5b47e567-76ec-47cc-a5a2-9bbc536b5628)
 
-3 Wazuh server setup and configuration
+3.Wazuh server setup and configuration
 
   3.1 Install Wazuh server using OVA
+  
   1. Enter website Wazuh - Virtual Machine OVA
+  
   2. In website, On ”Packet List”table, click on ”wazuh-4.11.1.ova (sha512)” on the right
     of table, then download begin. Wait until finish downloading
-    ![image](https://github.com/user-attachments/assets/d871858d-472e-450e-bee1-6d76b5d0baa1)
+   
+  ![image](https://github.com/user-attachments/assets/d871858d-472e-450e-bee1-6d76b5d0baa1)
 
   3. Open VMware Workstation window, then add new virtual machine into VMware Work-
     station, choosing file ”wazuh-4.11.1.ova”
+ 
   ![image](https://github.com/user-attachments/assets/ff6c2088-c25a-4496-9650-dc6014e20de0)
 
 3.2 Essential initial setup on start
@@ -88,7 +98,9 @@ You may find <wazuh.server.ip> by using following command
 $ ip address
 
 As result
+
 ![image](https://github.com/user-attachments/assets/904421ac-e0c6-4e76-9693-6d70d96a9154)
+
 From the result, we will using IP of ”192.168.1.131” to access Wazuh Dashboard
 through URL in any browser
 
@@ -130,7 +142,9 @@ $ systemctl restart wazuh-manager
 
 1. First entering Wazuh Dashboard, using following specific URL and using Wazuh IP
 https://<wazuh-server-ip>/app/endpoints-summary/agents-preview/deploy
+
 ![image](https://github.com/user-attachments/assets/d824b470-3edc-4a39-8f41-8c90e3e307c9)
+
 • Section 1: Then choosing package Windows ”MSI 32/64 bits”
 
 • Section 2 on Server addresses section: enter Wazuh server IP
@@ -159,6 +173,7 @@ monitoring directories like Download, Documents and Desktop
 <directories realtime="yes">C:\Users\*\Desktop</directories>
 
 Or you may check in the following image
+
 ![image](https://github.com/user-attachments/assets/ce9ae702-e48d-4861-8fdc-39cb615d05fb)
 
 4.3 Configuration to allow collect log from Window Defender
@@ -175,6 +190,7 @@ allow agent to capture log from Window Defender
 </localfile>
 
 Or may check in the following image
+
 ![image](https://github.com/user-attachments/assets/1423e5d3-d6ed-48c6-84a5-68c91e6809a6)
 
 5.Ubuntu server setup and configuration
