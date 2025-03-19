@@ -9,19 +9,23 @@ How to import virtual machine
   
   1. Upon on VMware Workstation window, on top left corner enter ”Edit” > ”Virtual Net-
     work Editor...”
-    ![image](https://github.com/user-attachments/assets/9c83fe2c-cf10-4925-baa0-f4b3352b0ade)
 
-  2. Go to lower right corner then enter ”Change Setting”
+  ![image](https://github.com/user-attachments/assets/9c83fe2c-cf10-4925-baa0-f4b3352b0ade)
+
+  3. Go to lower right corner then enter ”Change Setting”
+
   ![image](https://github.com/user-attachments/assets/70ae3ac2-8c05-41ef-8d18-6383af1aa64c)
 
-  3. Enter ”Add Network”, then choose desire network, For our case we choose VMnet2.
+  4. Enter ”Add Network”, then choose desire network, For our case we choose VMnet2.
     ![image](https://github.com/user-attachments/assets/d3e81bcf-2fbb-4f39-9419-1c214869c849)
 
-  4. Select VMnet 2, correct option ”Use local DHCP service to distribute IP address to
+  5. Select VMnet 2, correct option ”Use local DHCP service to distribute IP address to
     VMs”as
-    Then change subnet IP to ”192.168.1.0” with subnet mask of ”255.255.255.0” and click
-    ”OK”.
-    ![image](https://github.com/user-attachments/assets/1bdf8f82-d7a7-4eb0-af54-35dfe2ccf803)
+
+  Then change subnet IP to ”192.168.1.0” with subnet mask of ”255.255.255.0” and click
+  ”OK”.
+
+  ![image](https://github.com/user-attachments/assets/1bdf8f82-d7a7-4eb0-af54-35dfe2ccf803)
 
   
   1.2 Import virtual machine to VMware Workstation
