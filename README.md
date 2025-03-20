@@ -273,7 +273,6 @@ then save file.
 
 $ systemctl restart wazuh-manager
 
-4.Window 10 VM setup and configuration
 
 
 
